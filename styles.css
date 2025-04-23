@@ -246,7 +246,7 @@ body {
     }
 
     .section-container {
-        width: 80% !important; /* 设置宽度为 80% */
+        width: 90% !important; /* 设置宽度为 80% */
         padding: 1rem;
         margin-left: auto; /* 水平居中 */
         margin-right: auto; /* 水平居中 */
