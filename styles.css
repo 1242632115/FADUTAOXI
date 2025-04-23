@@ -1,0 +1,268 @@
+/* wig_photography_selector/frontend/styles.css */
+@import url('https://fonts.loli.net/css?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(to right, #ff758c, #ff7eb3);
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #2d3748;
+}
+
+.card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  /* 设置宽度和最大宽度 */
+  width: 100%;
+  max-width: 100%;
+  /* 可以根据实际情况添加固定高度 */
+  /* height: auto; 保持高度自适应内容 */ 
+}
+
+.selected {
+  box-shadow: 0 0 0 4px #4f46e5, 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  /* 确保宽度和高度不被修改 */
+  width: inherit !important;
+  height: inherit !important;
+}
+
+#angle-container {
+  /* 添加网格布局 */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; /* 可根据需要调整卡片之间的间距 */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.category-title {
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+.category-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  border-radius: 2px;
+  transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+.category-title:hover {
+  transform: translateY(-3px); /* 悬停时向上移动 */
+}
+
+.category-title:hover::after {
+  transform: scaleX(1.1); /* 悬停时下划线变长 */
+}
+
+/* 移除原有的按钮样式 */
+.btn-primary {
+  /* 清空原有样式 */
+}
+
+.btn-primary:hover {
+  /* 清空原有样式 */
+}
+
+.btn-secondary {
+  /* 清空原有样式 */
+}
+
+.btn-secondary:hover {
+  /* 清空原有样式 */
+}
+
+/* 添加新的 btn-11 类样式，并设置圆角 */
+/* btn-11 类样式 */ 
+.btn-11 { 
+  border: none; 
+  background: rgb(251,33,117); 
+  background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%); 
+  color: #fff; 
+  overflow: hidden; 
+  position: relative;
+  /* 设置圆角使按钮边角呈现圆形 */
+  border-radius: 9999px; 
+  /* 新增过渡效果 */
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+} 
+
+.btn-11:hover { 
+  text-decoration: none; 
+  color: #fff; 
+  opacity: .7; 
+  /* 新增悬停时的位移和阴影效果 */
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+} 
+
+/* 重新选择按钮样式 */
+.btn-secondary { 
+  transition: all 0.3s ease; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+} 
+
+.btn-secondary:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-11:before { 
+  position: absolute; 
+  content: ''; 
+  display: inline-block; 
+  top: -180px; 
+  left: 0; 
+  width: 30px; 
+  height: 100%; 
+  background-color: #fff; 
+  animation: shiny-btn1 3s ease-in-out infinite; 
+} 
+
+.btn-11:active{ 
+  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .2); 
+} 
+
+/* shiny-btn1 动画关键帧 */ 
+@keyframes shiny-btn1 { 
+  0% { transform: scale(0) rotate(45deg); opacity: 0; } 
+  80% { transform: scale(0) rotate(45deg); opacity: 0.5; } 
+  81% { transform: scale(4) rotate(45deg); opacity: 1; } 
+  100% { transform: scale(50) rotate(45deg); opacity: 0; } 
+} 
+
+@-webkit-keyframes shiny-btn1 { 
+  0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; } 
+  80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; } 
+  81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; } 
+  100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; } 
+}
+
+.text-center.mb-16 {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  width: 1200px !important; 
+  max-width: 1500px; 
+  box-sizing: border-box;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 为父元素添加样式 */
+.max-w-6xl.mx-auto {
+  max-width: 1200px; /* 修改为具体值，auto 可能无效 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category { 
+  margin-bottom: 30px; 
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  /* 电脑端样式 */ 
+  width: 100%; 
+  max-width: 1500px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* 手机端样式，假设手机屏幕最大宽度为 768px，可根据实际情况调整 */ 
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .section-container {
+        width: 100% !important;
+        padding: 1rem;
+    }
+
+    #angle-container, #style-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #hairdo-container {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 768px) { 
+  .category { 
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+}
