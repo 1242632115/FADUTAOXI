@@ -246,12 +246,14 @@ body {
     }
 
     .section-container {
-        width: 100% !important;
+        width: 80% !important; /* 设置宽度为 80% */
         padding: 1rem;
+        margin-left: auto; /* 水平居中 */
+        margin-right: auto; /* 水平居中 */
     }
 
-    #angle-container, #style-container {
-        grid-template-columns: repeat(1, 1fr);
+    #angle-container, #style-container, #hairdo-container {
+        grid-template-columns: repeat(2, 1fr); /* 让手机端每行最多显示两张卡片 */
     }
 
     #hairdo-container {
