@@ -1,0 +1,10 @@
+/*
+  https://7072-prod-4g7twbh15fa546ea-1328109619.tcb.qcloud.la/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: Content-Type
+
+https://picsum.photos/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: Content-Type
