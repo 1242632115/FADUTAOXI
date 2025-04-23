@@ -101,33 +101,20 @@
             </div>
             <div id="style-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
                 <div class="card" onclick="toggleSelection(this, 'style')">
-                    <img src="https://picsum.photos/400/400?random=5" alt="自然" class="w-full h-64 object-cover">
+                    <img src="https://7072-prod-4g7twbh15fa546ea-1328109619.tcb.qcloud.la/%E7%B2%BE%E7%BB%86%E6%89%93%E7%90%86%E5%A5%97%E7%B3%BB/%E5%B9%B3%E5%85%89.jpg?sign=91dd48d30a28603f3a37514598701faf&t=1745405273" alt="自然" class="w-full h-64 object-cover">
                     <div class="p-4 bg-white">
-                        <h3 class="font-semibold text-lg">自然</h3>
+                        <h3 class="font-semibold text-lg">平光</h3>
                         <p class="text-gray-500 text-sm">清新自然风格</p>
                     </div>
                 </div>
                 <div class="card" onclick="toggleSelection(this, 'style')">
-                    <img src="https://picsum.photos/400/400?random=6" alt="时尚" class="w-full h-64 object-cover">
+                    <img src="https://7072-prod-4g7twbh15fa546ea-1328109619.tcb.qcloud.la/%E7%B2%BE%E7%BB%86%E6%89%93%E7%90%86%E5%A5%97%E7%B3%BB/%E7%A1%AC%E5%85%89.jpg?sign=41ebdc979c0eac6d27b94f848ca8d126&t=1745405187" alt="时尚" class="w-full h-64 object-cover">
                     <div class="p-4 bg-white">
-                        <h3 class="font-semibold text-lg">时尚</h3>
+                        <h3 class="font-semibold text-lg">硬光</h3>
                         <p class="text-gray-500 text-sm">潮流前卫风格</p>
-                    </div>
+                    </div>               
                 </div>
-                <div class="card" onclick="toggleSelection(this, 'style')">
-                    <img src="https://picsum.photos/400/400?random=7" alt="复古" class="w-full h-64 object-cover">
-                    <div class="p-4 bg-white">
-                        <h3 class="font-semibold text-lg">复古</h3>
-                        <p class="text-gray-500 text-sm">怀旧经典风格</p>
-                    </div>
-                </div>
-                <div class="card" onclick="toggleSelection(this, 'style')">
-                    <img src="https://picsum.photos/400/400?random=8" alt="艺术" class="w-full h-64 object-cover">
-                    <div class="p-4 bg-white">
-                        <h3 class="font-semibold text-lg">艺术</h3>
-                        <p class="text-gray-500 text-sm">创意艺术风格</p>
-                    </div>
-                </div>
+                
             </div>
             <div class="flex space-x-4 justify-center">
                 <button class="btn-11 text-white px-8 py-3 font-medium" onclick="confirmCategorySelection('style')">
@@ -186,7 +173,15 @@
         </div>
     </div>
 
+    <!-- 新增确定按钮 -->
+    <div class="flex justify-center mt-8">
+        <button id="confirmPackage" class="btn-11 text-white px-8 py-3 font-medium">
+            套系我已确定
+        </button>
+    </div>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 </html>

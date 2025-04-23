@@ -116,6 +116,22 @@ function getCategoryName(category) {
 
 // 粒子效果初始化
 document.addEventListener('DOMContentLoaded', function() {
+    const confirmButton = document.getElementById('confirmPackage');
+    if (confirmButton) {
+        confirmButton.addEventListener('click', function() {
+            html2canvas(document.body, {
+                useCORS: true // 设置使用跨域模式加载图片
+            }).then(function(canvas) {
+                const link = document.createElement('a');
+                link.download = '套系预案截图.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     particlesJS('particles-js', {
         particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },
